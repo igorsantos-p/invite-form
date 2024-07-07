@@ -1,0 +1,42 @@
+.switch-inner {
+  margin-top: 1.2rem;
+  & .light {
+    display: none;
+  }
+
+  & input {
+    width: 6.4rem;
+    height: 3.2rem;
+    border-radius: 99rem;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      background: var(--input-stroke);
+      content: '';
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 0.2rem;
+      left: 0.2rem;
+      transition: 0.2s;
+    }
+    &:checked {
+      background: var(--brand-light);
+    }
+  }
+
+  &:has(:checked) ::before {
+    background: var(--text-head-color);
+    transform: translateX(3.2rem);
+    transition: 0.2s;
+  }
+
+  &:has(:checked) .light {
+    display: block;
+  }
+  &:has(:checked) .dark {
+    display: none;
+  }
+}

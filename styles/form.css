@@ -13,4 +13,15 @@ fieldset {
 
 .input-wrapper {
   margin-bottom: 1.6rem;
+  & > label {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.action {
+  margin-top: 6.2rem;
+
+  & button {
+    margin-left: auto;
+  }
 }

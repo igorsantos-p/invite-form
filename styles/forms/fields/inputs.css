@@ -9,7 +9,6 @@ textarea {
   border: 0.2rem solid transparent;
   outline: 0.1rem solid var(--input-stroke);
   color: var(--text-head-color);
-  margin-top: 1.2rem;
   &::placeholder {
     color: var(--input-placeholder);
   }
@@ -17,6 +16,15 @@ textarea {
   &:focus {
     border-color: var(--brand-light);
   }
+
+  &:invalid {
+    border: 0.2rem solid #ff5959;
+  }
+
+  &:valid + .error {
+    opacity: 0;
+  }
+
 }
 
 label {

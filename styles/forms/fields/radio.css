@@ -7,6 +7,18 @@
   display: grid;
   gap: 0.4rem;
   grid-template-columns: 1fr 1fr;
+
+  & .radio-inner {
+    &:hover,
+    &:focus-within,
+    &:has(:checked) {
+      background: var(--shape-hover);
+
+      & svg path {
+        fill: var(--brand-light);
+      }
+    }
+  }
 }
 
 .radio-inner {
@@ -19,21 +31,98 @@
     inset: 0;
     opacity: 0;
   }
+}
 
-  &:hover,
-  &:focus-within {
-    background: var(--shape-hover);
+.radio-wrapper-colors {
+  margin-bottom: 2.8rem;
 
-    & svg path {
-      fill: var(--brand-light);
-    }
+  & > label {
+    margin-bottom: 1.6rem;
   }
 
-  &:has(:checked) {
-    background: var(--shape-hover);
+  & .radio-inner {
+    background: url(../../../assets/icons/select-default.svg) no-repeat
+      center/contain;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
 
-    & svg path {
-      fill: var(--brand-light);
+    &:hover,
+    &:focus-within {
+      background: url(../../../assets/icons/select-hover.svg);
+    }
+
+    &:has(:checked) {
+      background: url(../../../assets/icons/selected.svg);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      top: 0.6rem;
+      left: 0.6rem;
+    }
+    &:nth-child(1)::before {
+      background: #59b2ff;
+    }
+    &:nth-child(2)::before {
+      background: #6a59ff;
+    }
+    &:nth-child(3)::before {
+      background: #b259ff;
+    }
+    &:nth-child(4)::before {
+      background: #ff59f9;
+    }
+    &:nth-child(5)::before {
+      background: #ff598b;
+    }
+    &:nth-child(6)::before {
+      background: #ff5959;
+    }
+    &:nth-child(7)::before {
+      background: #ff8b59;
+    }
+    &:nth-child(8)::before {
+      background: #ffcd59;
+    }
+    &:nth-child(9)::before {
+      background: #e1ff59;
+    }
+    &:nth-child(10)::before {
+      background: #59ff91;
+    }
+    &:nth-child(11)::before {
+      background: #59fff9;
+    }
+  }
+}
+
+.radio-wrapper-theme {
+  margin-bottom: 2.8rem;
+  & > label {
+    margin-bottom: 1.6rem;
+  }
+  & .radio-inner {
+    background: var(--shape-btn);
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+
+    border: 0.2rem solid transparent;
+    outline: 0.1rem solid var(--input-stroke);
+
+    &:hover {
+      background: var(--input-stroke);
+    }
+
+    &:has(:checked) {
+      border-color: var(--brand-light);
     }
   }
 }
