@@ -1,0 +1,11 @@
+button {
+  all: unset;
+  padding: 1.3rem 2rem;
+  background: var(--brand-dark);
+  color: var(--text-head-color);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  &:hover {
+    background: var(--brand-mid);
+  }
+}

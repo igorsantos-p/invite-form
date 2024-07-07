@@ -1,0 +1,29 @@
+input,
+select,
+textarea {
+  appearance: none;
+  width: 100%;
+  padding: 1.3rem 1.6rem;
+  background: var(--input-base);
+  border-radius: 0.8rem;
+  border: 0.2rem solid transparent;
+  outline: 0.1rem solid var(--input-stroke);
+  color: var(--text-head-color);
+  margin-top: 1.2rem;
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+
+  &:focus {
+    border-color: var(--brand-light);
+  }
+}
+
+label {
+  display: block;
+  font: var(--text-sm);
+}
+
+textarea {
+  height: 13.6rem;
+}

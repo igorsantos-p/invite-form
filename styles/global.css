@@ -43,3 +43,13 @@ h2 {
   font: var(--heading-sm);
   color: var(--text-head-color);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+fieldset {
+  all: unset;
+}
+

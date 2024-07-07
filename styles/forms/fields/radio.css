@@ -1,0 +1,39 @@
+.radio-wrapper {
+  padding: 0.4rem;
+  background: var(--input-base);
+  outline: 0.1rem solid var(--input-stroke);
+  border-radius: 0.8rem;
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-inner {
+  padding: 0.9rem 1.8rem;
+  position: relative;
+  border-radius: 0.4rem;
+
+  & input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus-within {
+    background: var(--shape-hover);
+
+    & svg path {
+      fill: var(--brand-light);
+    }
+  }
+
+  &:has(:checked) {
+    background: var(--shape-hover);
+
+    & svg path {
+      fill: var(--brand-light);
+    }
+  }
+}

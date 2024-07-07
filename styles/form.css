@@ -1,0 +1,16 @@
+fieldset {
+  margin-top: 4rem;
+  display: grid;
+
+  & legend {
+    font: var(--heading-sm);
+  }
+
+  & .legend-container {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.input-wrapper {
+  margin-bottom: 1.6rem;
+}
